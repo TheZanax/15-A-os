@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    background: url(assets/wallpaperbetter.com_1920x1080.jpg);
+    text-align: center;
+    color: #333;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+article {
+    max-width: 600px;
+    width: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+}
+
+
+/* Portada */
+.portada {
+    position: relative;
+    overflow: hidden;
+}
+.portada p {
+color: rgb(5, 32, 117);
+font-size: 30px;
+      text-shadow:
+    -1px -1px 0 rgb(255, 255, 255),
+     1px -1px 0 rgb(255, 255, 255),
+    -1px  1px 0 rgb(255, 255, 255),
+     1px  1px 0 rgb(255, 255, 255);
+}
+
+
+.marco {
+    padding: 60px 40px;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+    margin-bottom: 200px;
+}
+
+.decoracion-superior, .decoracion-inferior {
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.3;
+}
+
+.decoracion-superior {
+    top: -20px;
+    right: 30px;
+}
+
+.decoracion-inferior {
+    bottom: -20px;
+    left: 30px;
+}
+
+.titulo-xv {
+    margin-top: -80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: #051f91;
+}
+
+.nombre {
+      text-shadow:
+    -1px -1px 0 blue,
+     1px -1px 0 blue,
+    -1px  1px 0 blue,
+     1px  1px 0 blue;
+    font-family: 'Alex Brush', cursive;
+    font-size: 120px;
+    color: #ffffff;
+    line-height: 1;
+}
+
+
+/* Contador */
+.contador-seccion {
+    background: url(assets/wallpaperbetter.com_1920x1080\ \(1\).jpg);
+}
+
+.contador-contenedor {
+    animation: fadeInUp 1s ease-out;
+}
+
+.floral-header {
+    height: 120px;
+    margin-bottom: 30px;
+}
+
+.fecha-titulo {
+          text-shadow:
+    -1px -1px 0 blue,
+     1px -1px 0 blue,
+    -1px  1px 0 blue,
+     1px  1px 0 blue;
+    font-family: 'Alex Brush', cursive;
+    font-size: 56px;
+    color: rgb(255, 255, 255);
+    box-shadow: #000 , #000 , #000  ;
+}
+
+.fecha-numero {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 4px;
+}
+
+.contador-faltante {
+    padding: 50px 30px;
+    color: rgb(0, 0, 0);
+}
+
+.faltante-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 6px;
+    font-weight: 300;
+}
+
+.tiempo-numeros {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.tiempo-labels {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Alex Brush', cursive;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Detalles */
+.detalles-seccion {
+    color: white;
+          text-shadow:
+    -1px -1px 0 rgb(0, 0, 0),
+     1px -1px 0 rgb(0, 0, 0),
+    -1px  1px 0 rgb(0, 0, 0),
+     1px  1px 0 rgb(0, 0, 0);
+    background: url(/Cumpleaños15/assets/paisaje\ Azul.jpg);
+}
+
+/* .detalles-contenedor {
+    background: rgb(33, 171, 212);
+    padding: 60px 40px;
+    border: 2px solid #e0d5d0;
+    position: relative;
+    animation: fadeInUp 1s ease-out;
+} */
+
+.floral-esquina {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    opacity: 0.7;
+}
+
+.invitacion-titulo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.invitacion-subtitulo {
+    font-family: 'Alex Brush', cursive;
+    font-size: 42px;
+}
+
+.icono-fiesta, .icono-regalo {
+    font-size: 64px;
+    color: #c9a896;
+    display: block;
+    margin: 30px 0;
+}
+
+.salon-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* Regalos */
+.regalos-seccion {
+    background: linear-gradient(135deg, #c9a896 0%, #b89483 100%);
+    color: white;
+}
+
+.regalo-texto {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+/* Botones */
+.btn-mapa, .btn-cuenta {
+    display: inline-block;
+    background: #000;
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-mapa:hover, .btn-cuenta:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background: url(assets/fondo-textura-abstracta_1258-30506.avif);
+    padding: 40px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 36px;
+    color: #c9a896;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    animation: fadeIn 0.3s;
+}
+
+.modal-contenido {
+    background: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: slideDown 0.3s;
+}
+
+.cerrar {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nombre { font-size: 56px; }
+    .fecha-numero { font-size: 48px; }
+    .tiempo-numeros { font-size: 36px; }
+    .salon-nombre { font-size: 28px; }
+    .portada p { font-size: 20px; }
+}

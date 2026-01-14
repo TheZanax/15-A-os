@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV - Valentina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Alex+Brush&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sección Portada -->
+    <section class="portada">
+        <article class="marco">
+            <h1 class="titulo-xv">MIS<h1>
+            <h1 style="font-size: 100px; color: rgb(9, 9, 138); font-family: Arial, Helvetica, sans-serif;">XV</h1>
+            <h1 class="nombre">Valentina</h1>
+            <p>Hay momentos que se sueñan toda la vida, y este es uno de ellos. 
+                Mis quince años están por llegar, y nada me haría más feliz que celebrarlos junto a vos. 
+                Te espero para compartir una noche llena de magia, emociones y sonrisas.</p>
+            <nav><button class="btn-mapa" onclick="irAContador()">Fecha</button></nav>
+        </article>
+    </section>
+
+    <!-- Sección Contador -->
+    <section class="contador-seccion" id="contador-seccion">
+        <article class="contador-contenedor">
+            
+            <h3 class="fecha-titulo">Sábado</h3>
+            <h4 class="fecha-numero">21.02.26</h4>
+            
+            <div class="contador-faltante">
+                <h5 class="faltante-titulo">- FALTAN -</h5>
+                <div class="tiempo-numeros">
+                    <span id="dias">00</span>
+                    <span id="horas">00</span>
+                    <span id="minutos">00</span>
+                    <span id="segundos">00</span>
+                </div>
+                <div class="tiempo-labels">
+                    <span>Días</span>
+                    <span>Hs</span>
+                    <span>Min</span>
+                    <span>Seg</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- Sección Detalles -->
+    <section class="detalles-seccion">
+        <article class="detalles-contenedor">
+            
+            <h6 class="invitacion-titulo">Te invito a celebrar</h6>
+            <h3 class="invitacion-subtitulo">Mis Quince Años</h3>
+            
+            <h4 class="salon-nombre">Los Cocos</h4>
+            
+            <p><strong>Horario:</strong> 21:30hs</p>
+            <p>Av Juan Domingo Peron 1750,</p>
+            <p>Dress Code: Elegante</p>
+            
+            <button class="btn-mapa" onclick="abrirMapa()">VER MAPA</button>
+        </article>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>Te esperamos</p>
+    </footer>
+
+    <!-- Modal Mapa -->
+    <div id="modalMapa" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" onclick="cerrarMapa()">&times;</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28642.403187663476!2d-58.210983724732294!3d-26.186904616944535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smaps!5e0!3m2!1ses-419!2sar!4v1768419948029!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+// Función para scroll suave al contador
+function irAContador() {
+    const contador = document.getElementById('contador-seccion');
+    contador.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
+
+// Contador regresivo
+const fechaEvento = new Date('2026-02-21T22:00:00').getTime();
+
+function actualizarContador() {
+    const ahora = new Date().getTime();
+    const diferencia = fechaEvento - ahora;
+
+    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    document.getElementById('dias').textContent = Math.abs(dias).toString().padStart(2, '0');
+    document.getElementById('horas').textContent = Math.abs(horas).toString().padStart(2, '0');
+    document.getElementById('minutos').textContent = Math.abs(minutos).toString().padStart(2, '0');
+    document.getElementById('segundos').textContent = Math.abs(segundos).toString().padStart(2, '0');
+
+    if (diferencia < 0) {
+        document.querySelector('.faltante-titulo').textContent = '¡EL EVENTO HA COMENZADO!';
+    }
+}
+
+actualizarContador();
+setInterval(actualizarContador, 1000);
+
+// Animación al scroll
+const observador = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+});
+
+document.querySelectorAll('.contador-contenedor, .detalles-contenedor').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.8s ease-out';
+    observador.observe(el);
+});
+
+// Funciones para modales
+function abrirMapa() {
+    document.getElementById('modalMapa').style.display = 'block';
+}
+
+function cerrarMapa() {
+    document.getElementById('modalMapa').style.display = 'none';
+}
+
+function abrirCuenta() {
+    document.getElementById('modalCuenta').style.display = 'block';
+}
+
+function cerrarCuenta() {
+    document.getElementById('modalCuenta').style.display = 'none';
+}
+
+// Cerrar modal al hacer clic fuera
+window.onclick = function(event) {
+    const modalMapa = document.getElementById('modalMapa');
+    const modalCuenta = document.getElementById('modalCuenta');
+    
+    if (event.target == modalMapa) {
+        cerrarMapa();
+    }
+    if (event.target == modalCuenta) {
+        cerrarCuenta();
+    }
+}
+</script>
