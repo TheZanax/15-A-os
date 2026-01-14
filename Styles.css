@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    background: url(assets/wallpaperbetter.com_1920x1080.jpg);
+    background: url(https://thezanax.github.io/15-A-os/wallpaperbetter.com_1920x1080.jpg);
     text-align: center;
     color: #333;
 }
@@ -97,7 +97,7 @@ font-size: 30px;
 
 /* Contador */
 .contador-seccion {
-    background: url(assets/wallpaperbetter.com_1920x1080\ \(1\).jpg);
+    background: url(https://thezanax.github.io/15-A-os/wallpaperbetter.com_1920x1080\ \(1\).jpg);
 }
 
 .contador-contenedor {
@@ -165,7 +165,7 @@ font-size: 30px;
      1px -1px 0 rgb(0, 0, 0),
     -1px  1px 0 rgb(0, 0, 0),
      1px  1px 0 rgb(0, 0, 0);
-    background: url(/Cumpleaños15/assets/paisaje\ Azul.jpg);
+    background: url(https://thezanax.github.io/15-A-os/paisaje\ Azul.jpg);
 }
 
 /* .detalles-contenedor {
@@ -330,3 +330,4 @@ footer {
     .salon-nombre { font-size: 28px; }
     .portada p { font-size: 20px; }
 }
+
