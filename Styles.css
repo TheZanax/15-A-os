@@ -249,7 +249,7 @@ font-size: 30px;
 
 /* Footer */
 footer {
-    background: url(assets/fondo-textura-abstracta_1258-30506.avif);
+    background: url(https://thezanax.github.io/15-A-os/fondo-textura-abstracta_1258-30506.avif);
     padding: 40px;
     font-family: 'Alex Brush', cursive;
     font-size: 36px;
@@ -330,4 +330,5 @@ footer {
     .salon-nombre { font-size: 28px; }
     .portada p { font-size: 20px; }
 }
+
 
