@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
-    background: url(https://thezanax.github.io/15-A-os/wallpaperbetter.com_1920x1080.jpg);
+    background: url(assets/wallpaperbetter.com_1920x1080.jpg);
     text-align: center;
     color: #333;
 }
@@ -40,13 +40,13 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 .portada p {
-color: rgb(5, 32, 117);
+color: rgb(9, 9, 138);
 font-size: 30px;
       text-shadow:
-    -1px -1px 0 rgb(255, 255, 255),
-     1px -1px 0 rgb(255, 255, 255),
-    -1px  1px 0 rgb(255, 255, 255),
-     1px  1px 0 rgb(255, 255, 255);
+    -1px -1px 0 rgb(9, 9, 138),
+     1px -1px 0 rgb(9, 9, 138),
+    -1px  1px 0 rgb(9, 9, 138),
+     1px  1px 0 rgb(9, 9, 138);
 }
 
 
@@ -97,7 +97,7 @@ font-size: 30px;
 
 /* Contador */
 .contador-seccion {
-    background: url(https://thezanax.github.io/15-A-os/wallpaperbetter.com_1920x1080\ \(1\).jpg);
+    background: url(assets/wallpaperbetter.com_1920x1080\ \(1\).jpg);
 }
 
 .contador-contenedor {
@@ -116,14 +116,14 @@ font-size: 30px;
     -1px  1px 0 blue,
      1px  1px 0 blue;
     font-family: 'Alex Brush', cursive;
-    font-size: 56px;
+    font-size: 99px;
     color: rgb(255, 255, 255);
     box-shadow: #000 , #000 , #000  ;
 }
 
 .fecha-numero {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 64px;
+    font-size: 104px;
     font-weight: 600;
     color: #000;
     letter-spacing: 4px;
@@ -136,7 +136,7 @@ font-size: 30px;
 
 .faltante-titulo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
+    font-size: 44px;
     letter-spacing: 6px;
     font-weight: 300;
 }
@@ -165,7 +165,7 @@ font-size: 30px;
      1px -1px 0 rgb(0, 0, 0),
     -1px  1px 0 rgb(0, 0, 0),
      1px  1px 0 rgb(0, 0, 0);
-    background: url(https://thezanax.github.io/15-A-os/paisaje\ Azul.jpg);
+    background: url(/Cumpleaños15/assets/paisaje\ Azul.jpg);
 }
 
 /* .detalles-contenedor {
@@ -205,22 +205,10 @@ font-size: 30px;
 }
 
 .salon-nombre {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', serif, cursive;
     font-size: 36px;
     font-weight: 600;
     letter-spacing: 2px;
-}
-
-/* Regalos */
-.regalos-seccion {
-    background: linear-gradient(135deg, #c9a896 0%, #b89483 100%);
-    color: white;
-}
-
-.regalo-texto {
-    font-size: 18px;
-    font-weight: 600;
-    margin: 20px 0;
 }
 
 /* Botones */
@@ -249,7 +237,7 @@ font-size: 30px;
 
 /* Footer */
 footer {
-    background: url(https://thezanax.github.io/15-A-os/fondo-textura-abstracta_1258-30506.avif);
+    background: url(assets/fondo-textura-abstracta_1258-30506.avif);
     padding: 40px;
     font-family: 'Alex Brush', cursive;
     font-size: 36px;
@@ -330,5 +318,3 @@ footer {
     .salon-nombre { font-size: 28px; }
     .portada p { font-size: 20px; }
 }
-
-
