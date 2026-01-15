@@ -6,10 +6,9 @@
     <title>Mis XV - Valentina</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Alex+Brush&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://thezanax.github.io/15-A-os/Styles.css">
-<audio id="bgMusic" preload="auto" loop playsinline>
+<audio id="bgMusic" loop playsinline>
   <source src="https://thezanax.github.io/15-A-os/photograph.mp3" type="audio/mpeg">
 </audio>
-
 </head>
 <body>
     <!-- Sección Portada -->
@@ -21,13 +20,12 @@
             <p>Hay momentos que se sueñan toda la vida, y este es uno de ellos. 
                 Mis quince años están por llegar, y nada me haría más feliz que celebrarlos junto a vos. 
                 Te espero para compartir una noche llena de magia, emociones y sonrisas.</p>
-            <nav><button class="btn-mapa" onclick="irAContador()">Fecha</button></nav>
+            <button class="btn-mapa" onclick="irAContador(); iniciarMusica();">Fecha</button>
         </article>
     </section>
     <!-- Sección Contador -->
     <section class="contador-seccion" id="contador-seccion">
         <article class="contador-contenedor">
-            
             <h3 class="fecha-titulo">Sábado</h3>
             <h4 class="fecha-numero">21.02.26</h4>
             
@@ -159,20 +157,16 @@ window.onclick = function(event) {
         cerrarCuenta();
     }
 }
- const music = document.getElementById("bgMusic");
-  let started = false;
+const music = document.getElementById("bgMusic");
+let musicaIniciada = false;
 
-  function startMusic() {
-    if (started) return;
-    started = true;
+function iniciarMusica() {
+  if (musicaIniciada) return;
+  musicaIniciada = true;
 
-    music.volume = 0.3;
-    music.play().catch(() => {});
-  }
+  music.volume = 0.3;
+  music.play().catch(() => {});
+}
 
-  document.addEventListener("touchstart", startMusic, { once: true });
-  document.addEventListener("click", startMusic, { once: true });
 
 </script>
-
-
