@@ -6,9 +6,10 @@
     <title>Mis XV - Valentina</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Alex+Brush&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://thezanax.github.io/15-A-os/Styles.css">
-<audio id="bgMusic" loop playsinline>
+<audio id="bgMusic" preload="auto" loop playsinline>
   <source src="https://thezanax.github.io/15-A-os/photograph.mp3" type="audio/mpeg">
 </audio>
+
 </head>
 <body>
     <!-- Sección Portada -->
@@ -158,17 +159,20 @@ window.onclick = function(event) {
         cerrarCuenta();
     }
 }
-  const music = document.getElementById("bgMusic");
+ const music = document.getElementById("bgMusic");
+  let started = false;
 
-  function iniciarMusica() {
+  function startMusic() {
+    if (started) return;
+    started = true;
+
     music.volume = 0.3;
-    music.play();
-    document.removeEventListener("click", iniciarMusica);
-    document.removeEventListener("touchstart", iniciarMusica);
+    music.play().catch(() => {});
   }
 
-  document.addEventListener("click", iniciarMusica);
-  document.addEventListener("touchstart", iniciarMusica);
+  document.addEventListener("touchstart", startMusic, { once: true });
+  document.addEventListener("click", startMusic, { once: true });
 
 </script>
+
 
