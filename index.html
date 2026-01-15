@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis XV - Valentina</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Alex+Brush&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://thezanax.github.io/15-A-os/Styles.css">
-    <audio src="https://thezanax.github.io/15-A-os/photograph.mp3" autoplay loop></audio>
+    <link rel="stylesheet" href="styles.css">
+<audio id="bgMusic" loop playsinline>
+  <source src="https://thezanax.github.io/15-A-os/photograph.mp3" type="audio/mpeg">
+</audio>
 </head>
 <body>
     <!-- Sección Portada -->
@@ -45,7 +47,6 @@
             </div>
         </article>
     </section>
-    <audio src="https://thezanax.github.io/15-A-os/photograph.mp3" autoplay loop></audio>
     <!-- Sección Detalles -->
     <section class="detalles-seccion">
         <article class="detalles-contenedor">
@@ -86,7 +87,6 @@ function irAContador() {
         block: 'start'
     });
 }
-    <audio src="https://thezanax.github.io/15-A-os/photograph.mp3" autoplay loop></audio>
 // Contador regresivo
 const fechaEvento = new Date('2026-02-21T22:00:00').getTime();
 
@@ -158,10 +158,16 @@ window.onclick = function(event) {
         cerrarCuenta();
     }
 }
+  const music = document.getElementById("bgMusic");
+
+  function iniciarMusica() {
+    music.volume = 0.3;
+    music.play();
+    document.removeEventListener("click", iniciarMusica);
+    document.removeEventListener("touchstart", iniciarMusica);
+  }
+
+  document.addEventListener("click", iniciarMusica);
+  document.addEventListener("touchstart", iniciarMusica);
 
 </script>
-
-
-
-
-
